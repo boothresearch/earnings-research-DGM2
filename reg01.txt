@@ -1,16 +1,16 @@
-[1] 2020-09-15 19:52:28 UTC
+[1] 2020-09-15 20:35:40 UTC
 
 Call:
-lm(formula = earnings$earn ~ earnings$height)
+lm(formula = regformula, data = regdata)
 
 Residuals:
    Min     1Q Median     3Q    Max 
 -31405 -12456  -3645   6570 370190 
 
 Coefficients:
-                Estimate Std. Error t value Pr(>|t|)    
-(Intercept)     -85027.3     8860.7  -9.596   <2e-16 ***
-earnings$height   1595.0      132.9  12.003   <2e-16 ***
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -85027.3     8860.7  -9.596   <2e-16 ***
+height        1595.0      132.9  12.003   <2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 

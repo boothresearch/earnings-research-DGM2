@@ -46,6 +46,38 @@ reg03 <- function() {
   dev.off() # close the file
 }
 
+# [4] Regress earnings on height controlling for male and it's interaction with height
+reg04 <- function() {
+  # fit a linear model to the data
+  earnings <- subset(earnings, earn>0)
+  fitted.model <- write2file("reg04.txt", log(earn) ~ height + male, earnings)
+}
+
+# [5] Regress earnings on height controlling for male and it's interaction with height
+reg05 <- function() {
+  # fit a linear model to the data
+  earnings <- subset(earnings, earn>0)
+  fitted.model <- write2file("reg05.txt", log(earn) ~ height + male + height:male, earnings)
+}
+
+# [6] Regress log earnings on height controlling for male and it's interaction with log height
+reg06 <- function() {
+  # fit a linear model to the data
+  earnings <- subset(earnings, earn>0)
+  fitted.model <- write2file("reg06.txt", log(earn) ~ log(height) + male, earnings)
+}
+
+# [7] Regress earnings on height controlling for male and it's interaction with height
+reg07 <- function() {
+  # fit a linear model to the data
+  earnings <- subset(earnings, earn>0)
+  fitted.model <- write2file("reg07.txt", log(earn) ~ log(height) + male + height:male, earnings)
+}
+
 reg01()
 reg02()
 reg03()
+reg04()
+reg05()
+reg06()
+reg07()
